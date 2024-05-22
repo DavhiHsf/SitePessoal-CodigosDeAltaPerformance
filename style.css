@@ -14,31 +14,111 @@ body {
 
 }
 
+body.darkmode {
+    color: white;
+    background-color: black;
+
+  }
+
 /* ------------------------------------------- */
 
 header {
-    width: 100%;
+    /* width: 100%;
     height: 120px;
-    background-color: rgb(58, 58, 58); /* Cor de fundo do cabeçalho */
+    background-color: rgb(58, 58, 58);
     font-size: xx-large;
+    box-sizing: border-box;
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 10px;
-    color: white; /* Cor do texto do cabeçalho */
+    padding-left: 25px;
+    color: white;  */
+    background-color: rgb(58, 58, 58);
+    color: #f0f0f0;
+    height: 80px; /* Altura fixa para o header */
+    width: 100%;
+    text-shadow:  black 25px 5px 12px;
+    box-sizing: border-box;
+    /* padding: 15px 75px 0px 15px; */
+    position: relative;
+    display: flex;
+    font-size: 25px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(41, 41, 41, 0.437); /* Overlay semi-transparente */
+    z-index: 0; /* Coloca o overlay atrás do conteúdo */
+}
+
+header h1, #config-btn2 {
+    position: relative;
+    z-index: 1; /* Coloca o texto e o botão acima do overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra do texto */
+
+}
+
+.config-btn {
+
+
+}
+
+#config-btn2 {
+    /* position: absolute;
+    top: 20px;
+    right: 15px;
+    margin: 30px 0;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(58, 58, 58);;
+    color: white;
+    transition: background-color 0.3s, color 0.3s; */
+
+    background-color: #140087;
+    color: white;
+    box-shadow: black 25px 5px 35px;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 
 }
 
 /* ------------------------------------------- */
 
+.filter {
+    padding: 0px 40px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    padding: 20px;
+    position: inherit;
+  }
+
 main {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     height: 90vh;
     margin: 0;
-    background-color: rgb(0, 0, 63);
+    background-color: rgb(77, 2, 2);
 
 }
 
@@ -46,7 +126,6 @@ main {
     border-radius: 10px;
     width: 70px; height: 30px;
     cursor: pointer;
-    position: static;
     background-color: rgb(58, 58, 58);;
     color: white;
     transition: background-color 0.3s, color 0.3s;
@@ -58,16 +137,16 @@ main {
 .menu-diagonal {
     display: flex;
     flex-direction: column;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
 
 }
 
 .menu-btn {
     margin: 30px 0;
-    padding: 10px 140px;
+    /* padding: 10px 140px; */
     font-size: 20px;
     cursor: pointer;
-    transform: rotate(45deg);  /* Rotaciona os botões de volta para que o texto fique legível */
+    /* transform: rotate(45deg);  Rotaciona os botões de volta para que o texto fique legível */
     /* border: 2px solid #333; */
     border-radius: 15px;
     background-color: rgb(58, 58, 58);;
@@ -124,7 +203,7 @@ main {
 
 }
 
-.menu-btn:hover, .config-btn:hover, .voltar-bnt:hover {
+.menu-btn:hover, .config-btn:hover, .voltar-bnt:hover, .tab:hover, #config-btn2:hover {
     background-color: white;
     color: black;
 
@@ -138,3 +217,76 @@ main {
     padding: 5px;
     
 } */
+
+/* .container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+} */
+
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+
+.tab {
+    width: 300px;
+    height: 400px;
+    background-color: #140087;
+    color: white;
+    box-shadow: black 10px 15px 12px 5px;
+    display: flex;
+    border-radius: 15px;
+    /* justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-size: 30px;
+    transition: background-color 0.3s;
+     /* Sombra para efeito flutuante */
+
+}
+
+/* @media (max-width: 1000px) {
+    .tabs-container {
+        flex-direction: column;
+        gap: 20px;
+
+    }
+}
+
+    .tab {
+        width: 80%;
+        height: 200px;
+        font-size: 24px;
+    }    */
+
+/* @media (max-width: 600px) {
+    .tab {
+        width: 90%;
+        height: 150px;
+        font-size: 20px;
+        padding: 10px;
+    }
+} */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+}
+    
+    #config-bnt2 {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }

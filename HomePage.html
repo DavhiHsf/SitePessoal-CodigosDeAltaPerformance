@@ -15,11 +15,37 @@
 
         <h1> Titulo do Site </h1>
 
+        <div>
+
+            <nav>
+                    <a href="#" class="filter">Termos de Uso</a>
+
+                    <a href="#" class="filter">Política de Privacidade</a>
+
+                    <a href="#" class="filter">Contato</a>
+            </nav>
+
+        </div>
+
+              <div class="config-btn2">
+
+                <button id="config-btn2" onclick="navigateTo('Config.html')"> Configurações </button>
+
+            </div>
+
     </header>
 
 <main>
 
-        <div class="menu-diagonal">
+    <div class="tabs-container">
+        <div class="tab" onclick="navigateTo('Sobre.html')"> Sobre os Membros <br> <br> Saiba mais sobre os responsáveis por esse projeto. </div>
+
+        <div class="tab" onclick="navigateTo('Galeria.html')"> Galeria de Imagens <br> <br> Imagens aleatórias </div>
+
+        <div class="tab" onclick="navigateTo('Contato.html')"> Entre em Contato <br> <br> Fale conosco :) </div>
+    </div>
+
+        <!-- <div class="menu-diagonal">
 
             <button class="menu-btn" onclick="navigateTo('Sobre.html')"> Sobre os Membros ⭢</button>
 
@@ -29,31 +55,9 @@
             
             <button class="menu-btn" onclick="navigateTo('Contato.html')"> Entre em Contato ⭢</button>
             
-        </div>
+        </div> -->
 
 </main>
-
-<!-- <footer>
-
-    <div class="img">
-
-        <div class="filter">
-
-            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-            <nav>
-                <ul>
-                    <li><a href="#termos">Termos de Uso</a></li>
-                    <li><a href="#privacidade">Política de Privacidade</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-
-        </div>
-        
-    </div>
-
-</footer> -->
-
 
     <script src="script.js"></script>
 
