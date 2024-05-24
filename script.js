@@ -35,9 +35,11 @@ function fixartema() {
     }
   }
 
-document.addEventListener('DOMContentLoaded', fixartema);
+  document.addEventListener('DOMContentLoaded', function() {
+    fixartema();
+    document.getElementById('darkmode').addEventListener('click', darkmode);
+  });
 
-document.getElementById('darkmode').addEventListener('click', darkmode);
 
 
-
+  
