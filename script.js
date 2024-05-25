@@ -39,7 +39,3 @@ function fixartema() {
     fixartema();
     document.getElementById('darkmode').addEventListener('click', darkmode);
   });
-
-
-
-  

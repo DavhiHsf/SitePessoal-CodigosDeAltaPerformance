@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 5;
-    overflow: hidden; /* Impede o scroll */
+    overflow: ;   /* Impede o scroll */
 
 }
 
@@ -105,6 +105,7 @@ header h1, #config-btn2 {
     color: white;
     padding: 20px;
     position: relative;
+    z-index: 1;
 
   }
 
@@ -353,5 +354,42 @@ footer {
     header h1 {
         font-size: 24px;
     }
+
+.seila {
+
+}
+.seila main {
+    background: linear-gradient(rgba(255, 255, 255, 0.753), black 250%);
+    display: inline-table;
+    padding: 25px;
+    padding-top: 5px;
+    border: solid 5px;
+    border-radius: 5px;
+    border-color: rgb(58, 58, 58);
+
+}
+
+.seila h1 {
+    font-size: xx-large;
+
+}
+
+.seila h2 {
+    text-decoration: underline;
+
+}
+
+.seila p {
+    font-size: large;
+}
+
+.seila ul {
+    font-size: large;
+    
+}
+
+.seila footer {
+    
+}
     
     
