@@ -11,28 +11,22 @@
 <body>
 
     <header>
-
-        <h1> Configurações Gerais </h1>
-
-        <div>
-
-            <nav>
-                    <a href="#" class="filter">Termos e Condições </a>
-
-                    <a href="#" class="filter"> Sobre o Projeto </a>
-
-                    <a href="#" class="filter"> Entre em Contato </a>
-            </nav>
-
-        </div>
-
-              <div class="config-btn2">
-
-                <button id="config-btn2" onclick="navigateTo('HomePage.html')"> Configurações </button>
-
-        </div>
-
-    </header>
+        <h1 class="nav-titulo"><a onclick="navigateTo('/index.html')"> Titulo do Site </a> </h1>
+            <div>
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item-nova" onclick="navigateTo('/TerCon.html')"> Termos e Condições </li>
+                        <li class="nav-item-nova" onclick="navigateTo('/Sobre.html')"> Sobre o Projeto </li>
+                        <li class="nav-item-nova" onclick="navigateTo('/Contato.html')"> Entre em Contato </li>
+                    </ul>
+            </div>
+                  <div>
+                      <ul class="nav-list">
+                     <li class="nav-item-nova"><button class="config-btn2" id="darkmode"> DarkMode 🌕 </button> </li>
+                     <li class="nav-item-nova"><button class="config-btn2" onclick="navigateTo('Login.html')"> Login </button> </li>
+                </div>
+                    </ul>
+        </header>
 
     <main>
 
@@ -42,7 +36,7 @@
 
             <button class="config-btn" id="ajustar-fonte-btn"> Alterar Tamanho da Fonte </button>
 
-            <button class="voltar-bnt" onclick="navigateTo('HomePage.html')"> Voltar </button>
+            <button class="voltar-bnt" onclick="navigateToBack('')"> Voltar </button>
 
         </div>
 

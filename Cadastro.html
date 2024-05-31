@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title> Home Page </title>
+    <title> Página de Login </title>
+
 </head>
 
 <body>
 
-    <header>
+<header>
     <h1 class="nav-titulo"><a onclick="navigateTo('/index.html')"> Titulo do Site </a> </h1>
         <div>
             <nav>
@@ -29,27 +28,62 @@
             </div>
                 </ul>
     </header>
-    
-<main>
 
-    <div class="tabs-container">
-        <div class="tab" onclick="navigateTo('Sobre.html')"> Sobre os Membros <br> <br> Saiba mais sobre os responsáveis por esse projeto. </div>
+<main>
+  
+<div id="login">
+
+    <div class="caixa">
         
-        <div class="tab" onclick="navigateTo('Galeria.html')"> Galeria de Imagens <br> <br> Imagens aleatórias que ainda vamos por aqui. </div>
+        <img src="img/images-removebg-preview.png" alt="">
         
-        <div class="tab" onclick="navigateTo('Contato.html')"> Entre em Contato <br> <br> Fale conosco :) </div>
-    </div>
+        <h1 id="login-h1"> Cadastro </h1>
+        
+        <div class="name">
+
+            <input type="text" placeholder="Nome">
+
+          </div>
+
+        <div class="email">
+
+          <input type="email" placeholder="E-mail">
+
+        </div>
+
+        <div class="senha">
+
+          <input type="password" placeholder="Senha">
+
+        </div>
+
+        <div class="senha">
+
+        <input type="password" placeholder="Confirme a senha">
+
+        </div>
+
+        <div class="entrar">
+
+        <input type="submit" value="Entrar">
+
+          <p id="login-p"> Já tem uma conta? <a href="Login.html" id="login-link"> Entre aqui. </a> </p>
+
+        </div>
+    
+
+      </div>
+
+  </div>
 
 </main>
 
 <footer>
 
-    <p>© 2024 Volta Gojo </p>
+  <p>© 2024 Volta Gojo </p>
+  
+  </footer> 
     
-</footer>
-
-    <script src="script.js"></script>
-
 </body>
 
 </html>

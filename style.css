@@ -1,395 +1,398 @@
-html, body {
-    height: 100%;
-    margin: 5;
-    overflow: ;   /* Impede o scroll */
-
-}
-
+    /* CONFIGURAÇÕES DOS TEMAS */
 /* ------------------------------------------- */
 
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    transition: background-color 0.5s, color 0.5s;
-
-}
-
-/* ------------------------------------------- */
-
-header {
-    /* width: 100%;
-    height: 120px;
-    background-color: rgb(58, 58, 58);
-    font-size: xx-large;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 25px;
-    color: white;  */
-    background-color: rgb(77, 2, 2);
-    color: #f0f0f0;
-    height: 80px; /* Altura fixa para o header */
-    width: 100%;
-    box-sizing: border-box;
-    text-shadow: 5px 5px 5px black;
-    /* padding: 15px 75px 0px 15px; */
-    position: relative;
-    display: flex;
-    font-size: 25px;
-    padding: 0 20px;
-    justify-content: space-between;
-    align-items: center;
-    top: 0px;
-    transition: background-color 0.3s, color 0.3s;
-
-}
-
-/* header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(41, 41, 41, 0.437);
-    z-index: 0;
-} /*
-
-header h1, #config-btn2 {
-    position: relative;
-    z-index: 1; /* Coloca o texto e o botão acima do overlay 
-
-} */
-
-.config-btn {
-
-
-}
-
-#config-btn2 {
-    /* position: absolute;
-    top: 20px;
-    right: 15px;
-    margin: 30px 0;
-    padding: 5px;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(58, 58, 58);;
-    color: white;
-    transition: background-color 0.3s, color 0.3s; */
-
-    background-color: rgb(58, 58, 58);
-    color: white;
-    box-shadow: 10px 5px 10px black;
-    border: outset;
-    border-color: black;
-    padding: 10px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
-    z-index: 1;
-
-}
-
-/* ------------------------------------------- */
-
-.filter {
-    padding: 0px 40px;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-
-  }
-
-main {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    margin: 0;
-    /* background-color: rgb(58, 58, 58); */
-    background: linear-gradient(rgb(58, 58, 58), black 95%);
-    transition: background-color 0.3s, color 0.3s;
-
-}
-
-footer {
-    background: linear-gradient(black, rgb(77, 2, 2));
-    color: #f0f0f0;
-    padding: 0 20px;
-    position: relative;
-    display: flex;
-    height: 75px;
-    justify-content: space-between;
-    align-items: center;
+:root{
+    --color: #f0f0f0;
+    --text-shadow: 5px 5px 5px black;
+    --background-color-body: black;
+    --background-color-header: #24252a;
+    --background-color-config-btn2: rgb(58, 58, 58);
+    --hover-background-color-config-btn2: white;
+    --border-color-config-btn2: black;
+    --hover-border-color-config-btn2: black;
+    --hover-color-config-btn2: black;
+    --background-main: linear-gradient(rgb(58, 58, 58), black 95%);
+    --background-color-tab: rgb(77, 2, 2);
+    --hover-background-color-tab: white;
+    --hover-color-tab: black;
+    --hover-border-color-tab: black;
+    --box-shadow-tab: black 10px 15px 12px 5px;
+    --background-footer: linear-gradient(black, rgb(77, 2, 2));
+    }
+    .darkmode:root{
+    --color: #f0f0f0;
+    --text-shadow: 5px 5px 5px black;
+    --background-color-body: black;
+    --background-color-header: linear-gradient( rgb(59, 4, 59), black 195%);
+    --background-color-config-btn2: linear-gradient(black, gray 290%);
+    --hover-background-color-config-btn2: linear-gradient(black, gray 290%);
+    --border-color-config-btn2: black;
+    --hover-border-color-config-btn2: rgb(59, 4, 59);
+    --hover-color-config-btn2: rgb(207, 6, 207);   
+    --background-main: linear-gradient(black, rgb(59, 4, 59) 195%);
+    --hover-color-tab: rgb(207, 6, 207);
+    --box-shadow-tab: none;
+    --hover-border-color-tab: rgb(59, 4, 59);
+    --background-color-tab: linear-gradient(black, gray 290%);
+    --background-footer: linear-gradient(rgba(51, 1, 51, 0.299), black);
+    }
     
-}
-
-.darkmode body {
-    background-color: black;
-
-    }
-
-.darkmode header {
-    background-color: rgb(59, 4, 59);
-    color: white;
-    }
-  
-.darkmode main {
-    background: linear-gradient(black, rgb(59, 4, 59) 195%);
-    transition: background-color 0.3s, color 0.3s;
-
-    }
-
-.darkmode footer {
-    background: linear-gradient(rgba(51, 1, 51, 0.299), black)
-
-    }
-
-.darkmode .tab {
-    background: linear-gradient(black, gray 290%);
-
-}
-
-.darkmode #config-btn2 {
-    background: linear-gradient(black, gray 290%);
-
-}
-
-.voltar-bnt {
-    border-radius: 10px;
-    width: 70px; height: 30px;
-    cursor: pointer;
-    background-color: rgb(58, 58, 58);;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-
-}
-
+    /* BODY, HEADER, MAIN E FOOTER */
 /* ------------------------------------------- */
 
-.menu-diagonal {
-    display: flex;
-    flex-direction: column;
-    /* transform: rotate(-45deg); */
-
-}
-
-.menu-btn {
-    margin: 30px 0;
-    /* padding: 10px 140px; */
-    font-size: 20px;
-    cursor: pointer;
-    /* transform: rotate(45deg);  Rotaciona os botões de volta para que o texto fique legível */
-    /* border: 2px solid #333; */
-    border-radius: 15px;
-    background-color: rgb(58, 58, 58);;
-    color: white;
-
-    transition: background-color 0.3s, color 0.3s;
-
-}
-
-@media (max-width: 750px) {
-    .menu-btn {
+    body {
+        display: flex;
         flex-direction: column;
-        padding: 10px 70px;
-
-    }
-}
-
-/* ------------------------------------------- */
-
-.menu-config {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-
-}
-
-.config-btn {
-    margin: 30px 0;
-    padding: 10px 140px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 15px;
-    background-color: rgb(58, 58, 58);
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-
-}
-
-.mini-telinha {
-    display: none; /* Escondido por padrão */
-    position: absolute;
-    align-items: center;
-    background-color: rgb(58, 58, 58);
-    border-radius: 12px;
-    padding: 8px;
-    box-shadow: 10px 10px 10px 0px rgb(0, 0, 0);
-    z-index: 1000;
-
-}
-
-.mini-telinha button {
-    display: flexbox;
-    margin: 5px 10px;
-    border-radius: 15px;
-
-}
-
-.menu-btn:hover, .config-btn:hover, .voltar-bnt:hover, .tab:hover, #config-btn2:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
-
-}
-
-.darkmode .tab:hover {
-    color: rgb(207, 6, 207);
-    border-color: rgb(59, 4, 59);
-
-}
-
-.darkmode #config-btn2:hover {
-    color: rgb(207, 6, 207);
-    border-color: rgb(59, 4, 59);
-
-}
-
-
-
-/* ------------------------------------------- */
-
-
-/* .img {
-    background-image: linear-gradient(360deg, transparent, blue 90%);
-    padding: 5px;
+        background-color: black;
+        transition: background-color 0.5s, color 0.5s;
     
-} */
-
-/* .container {
-    display: flex;
-    flex: 1;
-    width: 100%;
-} */
-
-.tabs-container {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-
-}
-
-.tab {
-    width: 300px;
-    height: 400px;
-    background-color:  rgb(77, 2, 2);;
-    color: white;
-    box-shadow: black 10px 15px 12px 5px;
-    display: flex;
-    border: 3px;
-    border-color: black;
-    border-radius: 15px;
-    border-style: outset;
-    text-shadow: black 10px 7.5px 5px;
-    /* justify-content: center;
-    align-items: center; */
-    cursor: pointer;
-    padding-left: 15px;
-    padding-top: 20px;
-    font-size: 30px;
-    transition: background-color 0.3s, color 0.3s;
-     /* Sombra para efeito flutuante */
-
-}
-
-/* @media (max-width: 1000px) {
-    .tabs-container {
-        flex-direction: column;
-        gap: 20px;
-
     }
-}
-
-    .tab {
-        width: 80%;
-        height: 200px;
-        font-size: 24px;
-    }    */
-
-/* @media (max-width: 600px) {
-    .tab {
-        width: 90%;
-        height: 150px;
-        font-size: 20px;
-        padding: 10px;
-    }
-} */
-
-@media (max-width: 600px) {
+    
     header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        text-align: center;
-    }
-}
-    
-    #config-bnt2 {
-        margin-top: 10px;
-        font-size: 14px;
+        color: #f0f0f0;
+        height: 12.3vh;
+        width: 100vw;
+        box-sizing: border-box;
+        text-shadow: 5px 5px 5px black;
+        position: relative;
+        display: flex;
+        font-size: 25px;
+        padding: 1.2rem 2rem;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s, color 0.3s;
+        background-color: #24252a;
+        flex-direction: row;
+
     }
 
     header h1 {
         font-size: 24px;
     }
 
-.seila {
-
-}
-.seila main {
-    background: linear-gradient(rgba(255, 255, 255, 0.753), black 250%);
-    display: inline-table;
-    padding: 25px;
-    padding-top: 5px;
-    border: solid 5px;
-    border-radius: 5px;
-    border-color: rgb(58, 58, 58);
-
-}
-
-.seila h1 {
-    font-size: xx-large;
-
-}
-
-.seila h2 {
-    text-decoration: underline;
-
-}
-
-.seila p {
-    font-size: large;
-}
-
-.seila ul {
-    font-size: large;
+    main {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        margin: 0;
+        background: linear-gradient(rgb(58, 58, 58), black 95%);
+        transition: background-color 0.3s, color 0.3s;
     
-}
+    }
+    
+    footer {
+        background: linear-gradient(black, rgb(77, 2, 2));
+        color: #f0f0f0;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        height: 75px;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
 
-.seila footer {
+    * {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        box-sizing: border-box;
+        overflow: visible;
+        max-width: 100%;
     
-}
+    }
+
+    /* CONFIGURAÇÕES DOS ITENS NO HEADER */
+/* ------------------------------------------- */
     
+    .logo {
+        display: flex;
+        align-items: center;
+        color: white;
     
+    }
+    
+    .nav-list {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-list ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .nav-item-nova {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-left: 1.8rem;
+        position: left;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--color);
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+    
+    .config-btn2 {
+        background-color: rgb(58, 58, 58);
+        color: white;
+        border: groove;
+        border-color: black;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 1;
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        height: 112%;
+    }
+    
+    .nav-titulo {
+        display: flex;
+        align-items: center;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+
+    /* CONFIGURAÇÕES DO MODO ESCURO */
+/* ------------------------------------------- */
+
+    .darkmode body {
+        background-color: black;
+    
+    }
+    
+    .darkmode header {
+        background: linear-gradient( rgb(59, 4, 59), black 195%);
+        color: white;
+    }
+    
+    .darkmode main {
+        background: linear-gradient(black, rgb(59, 4, 59) 195%);
+        transition: background-color 0.3s, color 0.3s;
+    
+    }
+    
+    .darkmode footer {
+        background: linear-gradient(rgba(51, 1, 51, 0.299), black)
+    }
+    
+    .darkmode .tab {
+        background: linear-gradient(black, gray 290%);
+    
+    }
+    
+    .darkmode .config-btn2 {
+        background: linear-gradient(black, gray 290%);
+    
+    }
+
+    /* CONFIGURAÇÕES DO BOTÃO VOLTAR DAS PÁGINAS */
+/* ------------------------------------------- */
+    
+    .voltar-bnt {
+        border-radius: 10px;
+        width: 70px;
+        height: 30px;
+        cursor: pointer;
+        background-color: rgb(58, 58, 58);
+        ;
+        color: white;
+        transition: background-color 0.3s, color 0.3s;
+    
+    }
+
+    /* CONFIGURAÇÕES DO HOVER */
+/* ------------------------------------------- */
+
+    .voltar-bnt:hover,
+    .tab:hover,
+    .config-btn2:hover {
+        background-color: white;
+        color: black;
+        border-color: black;
+    
+    }
+    
+    .darkmode .tab:hover {
+        color: rgb(207, 6, 207);
+        border-color: rgb(59, 4, 59);
+    
+    }
+    
+    .darkmode .config-btn2:hover {
+        color: rgb(207, 6, 207);
+        border-color: rgb(59, 4, 59);
+    
+    }
+
+    /* CONFIGURAÇÕES DA RESPONSIVIDADE */
+/* ------------------------------------------- */
+    
+    @media (max-width: 750px) {
+        .menu-btn {
+            flex-direction: column;
+            padding: 10px 70px;
+    
+        }
+    }
+    
+    /* CONFIGURAÇÕES DAS TABS DO MENU */
+/* ------------------------------------------- */
+
+    .tabs-container {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    
+    }
+    
+    .tab {
+        width: 300px;
+        height: 400px;
+        background-color: rgb(77, 2, 2);
+        ;
+        color: white;
+        box-shadow: black 10px 15px 12px 5px;
+        display: flex;
+        border: 3px;
+        border-color: black;
+        border-radius: 15px;
+        border-style: outset;
+        text-shadow: black 10px 5px 10px;
+        cursor: pointer;
+        padding-left: 15px;
+        padding-top: 20px;
+        font-size: 30px;
+        transition: background-color 0.3s, color 0.3s;
+    
+    }
+
+    .menu-config {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    
+    /* CSS DA PÁGINA DE TERMOS E CONDIÇÕES */
+/* ------------------------------------------- */
+    
+    .seila main {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+        color: white;
+        max-height: 2000px;
+        border: solid black 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: static ;
+    }
+
+    /* CSS DAS PÁGINAS DE LOGIN E CADASTRO */
+/* ------------------------------------------- */
+
+      #login-link {
+        text-decoration: none;
+        color: blue;
+      
+      }
+
+      #login {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .name input {
+        border-radius: 15px;
+        border: none;
+        width: 250px;
+        height: 40px;
+        padding-left: 15px;
+        background-color: #b6b6b6;
+        color: black;
+        margin-top: 15px;
+
+      }
+
+      .email input {
+        border-radius: 15px;
+        border: none;
+        width: 250px;
+        height: 40px;
+        padding-left: 15px;
+        background-color: #b6b6b6;
+        color: black;
+        margin-top: 15px;
+
+      }
+
+      .senha input {
+        border-radius: 15px;
+        border: none;
+        width: 250px;
+        height: 40px;
+        padding-left: 15px;
+        background-color: #b6b6b6;
+        color: black;
+        margin-top: 15px;
+      
+      }
+
+      .entrar input {
+        background-color: rgb(58, 58, 58);
+        color: white;
+        border: groove;
+        border-color: black;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 1;
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        height: 112%;
+
+      }
+
+      input::placeholder {
+        color: #000000;
+
+      }
+
+      #login-h1, #login-p {
+        color: white;
+
+      }
+
+      .caixa {
+        margin-top: 60px;
+        background-color: rgb(77, 2, 2);
+        padding: 20px;
+        border-radius: 15px;
+        width: 500px;
+        box-shadow: #000000 10px 10px 10px;
+
+      }
+
+      .caixa img {
+        width: 200px;
+        border-radius: 30%;
+
+      }
+
+      input:focus {
+        outline: none;
+
+    }
