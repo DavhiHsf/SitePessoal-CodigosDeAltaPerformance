@@ -1,2 +1,2 @@
-# SitePessoal CAP
-Trabalho de desenvolvimento da disciplina "Códigos de Alta Performance"
+# SitePessoal CodigosDeAltaPerformance
+Trabalho de desenvolvimento de um site sobre os membros e com uma galeria de imagens, da disciplina "Códigos de Alta Performance".
